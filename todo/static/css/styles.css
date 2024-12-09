@@ -1,0 +1,135 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #13388e; /* Modern blue accent color */
+    margin-bottom: 1rem;
+}
+
+.add-task-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #13388e;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+    background-color: #1741a3;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-content input[type="checkbox"]:checked + .task-title {
+    text-decoration: line-through;
+    color: #888;
+}
+
+
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+}
+
+.task-content input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+}
+
+.task-title {
+    font-size: 1rem;
+    color: #333;
+}
+
+.task-title.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-actions a {
+    font-size: 0.9rem;
+    color: #3F88C5;
+    text-decoration: none;
+    margin-left: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.task-actions a:hover {
+    color: #2b6da3;
+}
+
+.task-actions .delete-btn {
+    color: #D72638;
+}
+
+.task-actions .delete-btn:hover {
+    color: #b61e2c;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .add-task-btn {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .task-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-top: 0.5rem;
+    }
+}

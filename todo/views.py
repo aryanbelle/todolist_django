@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Task
 from django.shortcuts import get_object_or_404
+from .forms import TaskForm  
 
 def task_list(request):
     tasks = Task.objects.all()
@@ -24,3 +25,11 @@ def toggle_task(request, task_id):
         task.completed = not task.completed
         task.save()
         return redirect('task_list')
+
+def edit_task(request, task_id):
+    task = get_object_or_404(Task, pk=task_id)
+    form = TaskForm(request.POST or None, instance=task)
+    if form.is_valid():
+        form.save()
+        return redirect('task_list')
+    return render(request, 'todo/edit_task.html', {'form': form})
