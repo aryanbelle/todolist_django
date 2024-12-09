@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.title }} - 
+                {% if task.completed %}
+                    <span style="color: green;">Completed</span>
+                {% else %}
+                    <span style="color: red;">Pending</span>
+                {% endif %}
+                <form action="{% url 'toggle_task' task.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">
+                        {% if task.completed %}Mark as Pending{% else %}Mark as Completed{% endif %}
+                    </button>
+                </form>
+                <form action="{% url 'delete_task' task.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_task' %}">Add Task</a>
+    
+</body>
+</html>
