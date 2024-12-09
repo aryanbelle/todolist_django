@@ -99,6 +99,20 @@ a:hover {
     color: #2b6da3;
 }
 
+/* Watermark Styles */
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    opacity: 0.5;
+    z-index: 1000;
+    display: flex; /* Use flexbox to align items horizontally */
+    gap: 5px; /* Optional: control the space between the name and GitHub link */
+    align-items: center; /* Ensure both items are vertically aligned */
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     .container {

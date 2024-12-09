@@ -37,6 +37,27 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    opacity: 0.5;
+    z-index: 1000;
+}
+
+.watermark a {
+    text-decoration: none;
+    color: #13388e;
+    font-weight: bold;
+}
+
+.watermark a:hover {
+    text-decoration: underline;
+    color: #1741a3;
+}
+
 .add-task-btn:hover {
     background-color: #1946af;
     color: white;
