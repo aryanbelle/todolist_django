@@ -30,6 +30,7 @@ body {
     color: #fff;
     background-color: #13388e;
     border: none;
+    border-radius: 6px;
     text-decoration: none;
     text-align: center;
     margin-bottom: 1rem;
@@ -37,7 +38,8 @@ body {
 }
 
 .add-task-btn:hover {
-    background-color: #1741a3;
+    background-color: #1946af;
+    color: white;
 }
 
 .task-list {

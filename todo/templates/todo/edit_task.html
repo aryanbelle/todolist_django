@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Task</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/edit_task.css' %}">
 </head>
 <body>
-    <div class="container"> 
-        <h1>Edit Task</h1>
-
+    <div class="container">
+        <h1 class="page-title">Edit Task</h1>
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }} 
-            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <input type="text" name="title" placeholder="Task Title" value="{{ task.title }}">
+            <textarea name="description" placeholder="Task Description">{{ task.description }}</textarea>
+            <div class="form-actions">
+                <button type="submit">Save</button>
+                <a href="{% url 'task_list' %}" class="cancel-btn">Cancel</a>
+            </div>
         </form>
-
-        <a href="{% url 'task_list' %}" class="btn btn-secondary">Back to Task List</a>
     </div>
 </body>
 </html>
