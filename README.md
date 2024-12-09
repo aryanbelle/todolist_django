@@ -85,6 +85,18 @@ The application will be accessible at:
 
 ---
 
+## Screenshots
+
+Tasks List View
+![Screenshot 2024-12-10 025105](https://github.com/user-attachments/assets/d27ff95c-938f-46de-be55-379d382a5901)
+
+Add New Task
+![Screenshot 2024-12-10 025124](https://github.com/user-attachments/assets/d42a2dc8-1a63-41fb-b589-a7c636aa3b24)
+
+Edit Task Page
+![Screenshot 2024-12-10 025150](https://github.com/user-attachments/assets/16c59e83-470c-4027-8f78-180c1cb2c203)
+
+
 ## Deployment
 
 To deploy the app to a live server, follow the steps outlined [here](https://docs.djangoproject.com/en/stable/howto/deployment/).
